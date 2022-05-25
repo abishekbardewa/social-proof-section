@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+	--veryDarkMagenta: hsl(300, 43%, 22%);
+	--softPink: hsl(333, 80%, 67%);
+	--darkGrayishMagenta: hsl(303, 10%, 53%);
+	--lightGrayishMagenta: hsl(300, 24%, 96%);
+	--white: hsl(0, 0%, 100%);
+}
+body {
+	font-family: 'League Spartan', sans-serif;
+	background: url(./images/bg-pattern-top-desktop.svg) no-repeat;
+}
+main p {
+	color: var(--darkGrayishMagenta);
+}
+main h1,
+.stars p {
+	color: var(--veryDarkMagenta);
+}
+.stars img {
+	margin-right: 10px;
+}
+.bg-card {
+	background-color: var(--lightGrayishMagenta);
+}
+.testimonials .card {
+	background: var(--veryDarkMagenta);
+	padding: 40px 20px;
+	border-radius: 10px;
+}
+.testimonials .card h3 {
+	color: var(--white);
+}
+.testimonials .card h4 {
+	color: var(--softPink);
+}
+.testimonials .card p {
+	color: var(--white);
+}
+.attribution {
+	font-size: 13px;
+	text-align: center;
+	margin: 25px 0px;
+}
+.attribution a {
+	color: var(--veryDarkMagenta);
+}
+
+@media (min-width: 768px) {
+	main {
+		max-width: 600px;
+		margin: auto;
+	}
+	.stars {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+	.testimonials {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.showcase {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 10px;
+	}
+	.stars {
+		display: inline-block;
+		/* padding: 10px; */
+		max-width: 400px;
+		/* /* grid-template-columns: repeat(3, 1fr); */
+		gap: 30px;
+	}
+	.stars > div:nth-child(2) {
+		transform: translateX(10%);
+	}
+	.stars > div:nth-child(3) {
+		transform: translateX(20%);
+	}
+	main {
+		max-width: auto;
+		margin: auto;
+	}
+	main h1 {
+		font-size: 70px;
+	}
+	main p {
+		padding-right: 11px;
+	}
+
+	.testimonials > div:nth-child(2) {
+		transform: translateY(10%);
+	}
+	.testimonials > div:nth-child(3) {
+		transform: translateY(20%);
+	}
+}
